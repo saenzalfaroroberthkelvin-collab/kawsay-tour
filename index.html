@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kawsay Tours | Turismo Nacional del Perú</title>
+
+<meta name="description"
+content="Conoce los mejores destinos turísticos del Perú con Kawsay Tours.">
+
+<meta name="keywords"
+content="Turismo Perú, Viajes Perú, Cusco, Machu Picchu">
+
+<meta name="author"
+content="Kawsay Tours">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+/*=================================================
+CONFIGURACIÓN GENERAL
+==================================================*/
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+scroll-behavior:smooth;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+background:#0d0d0d;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+section{
+
+padding:80px 8%;
+
+}
+
+.container{
+
+width:100%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+/*=================================================
+NAVBAR
+==================================================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#FFD700;
+
+}
+
+.logo i{
+
+font-size:38px;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+.menu li a{
+
+color:white;
+
+font-weight:500;
+
+transition:.4s;
+
+}
+
+.menu li a:hover{
+
+color:#FFD700;
+
+}
+
+.menu-mobile{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/*=================================================
+HERO
+==================================================*/
+
+.hero{
+
+height:100vh;
+
+background:url("img/peru.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.60);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:10;
+
+max-width:900px;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+.hero h1 span{
+
+color:#FFD700;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:35px;
+
+margin-bottom:35px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:700;
+
+border-radius:50px;
+
+margin:10px;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.btn2{
+
+display:inline-block;
+
+padding:16px 35px;
+
+border:2px solid #FFD700;
+
+color:#FFD700;
+
+border-radius:50px;
+
+margin:10px;
+
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:#FFD700;
+
+color:black;
+
+}
+
+/*=================================================
+NOSOTROS
+==================================================*/
+
+.nosotros{
+
+background:#111;
+
+}
+
+.nosotros-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.nosotros h2{
+
+font-size:45px;
+
+color:#FFD700;
+
+margin-bottom:25px;
+
+}
+
+.nosotros p{
+
+line-height:32px;
+
+font-size:18px;
+
+margin-bottom:18px;
+
+}
+
+.nosotros img{
+
+border-radius:20px;
+
+box-shadow:0 10px 35px rgba(255,215,0,.25);
+
+}
+
+/*=================================================
+BUSCADOR
+==================================================*/
+
+.search{
+
+text-align:center;
+
+background:#0f0f0f;
+
+}
+
+.search h2{
+
+font-size:40px;
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.search input{
+
+width:600px;
+
+max-width:90%;
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+outline:none;
+
+}
+
+/*=================================================
+DESTINOS
+==================================================*/
+
+.destinos h2{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:60px;
+
+color:#FFD700;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+.card{
+
+background:#1a1a1a;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 40px rgba(255,215,0,.2);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.card-content{
+
+padding:20px;
+
+}
+
+.card-content h3{
+
+color:#FFD700;
+
+font-size:22px;
+
+margin-bottom:10px;
+
+}
+
+.card-content p{
+
+font-size:15px;
+
+line-height:25px;
+
+color:#ccc;
+
+margin-bottom:15px;
+
+}
+
+.card button{
+
+padding:10px 20px;
+
+border:none;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:700;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+background:#fff;
+
+}
+
+/*=================================================
+SECCIÓN DESTINOS
+==================================================*/
+
+.destinos-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+/*=================================================
+DEPARTAMENTOS (PARTE 1)
+==================================================*/
+
+<div class="destinos">
+
+<div class="cards">
+
+<!-- AMAZONAS -->
+
+<div class="card">
+
+<img src="img/amazonas.jpg">
+
+<div class="card-content">
+
+<h3>Amazonas</h3>
+
+<p>Kuélap, catarata Gocta y naturaleza increíble.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- ANCASH -->
+
+<div class="card">
+
+<img src="img/ancash.jpg">
+
+<div class="card-content">
+
+<h3>Áncash</h3>
+
+<p>Huaraz, Laguna 69 y nevados espectaculares.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- APURIMAC -->
+
+<div class="card">
+
+<img src="img/apurimac.jpg">
+
+<div class="card-content">
+
+<h3>Apurímac</h3>
+
+<p>Cañones, montañas y cultura andina.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- AREQUIPA -->
+
+<div class="card">
+
+<img src="img/arequipa.jpg">
+
+<div class="card-content">
+
+<h3>Arequipa</h3>
+
+<p>Cañón del Colca y la Ciudad Blanca.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- AYACUCHO -->
+
+<div class="card">
+
+<img src="img/ayacucho.jpg">
+
+<div class="card-content">
+
+<h3>Ayacucho</h3>
+
+<p>Historia, iglesias y Semana Santa.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- CAJAMARCA -->
+
+<div class="card">
+
+<img src="img/cajamarca.jpg">
+
+<div class="card-content">
+
+<h3>Cajamarca</h3>
+
+<p>Baños del Inca y paisajes andinos.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- CUSCO -->
+
+<div class="card">
+
+<img src="img/cusco.jpg">
+
+<div class="card-content">
+
+<h3>Cusco</h3>
+
+<p>Machu Picchu y Valle Sagrado.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- HUANCAVELICA -->
+
+<div class="card">
+
+<img src="img/huancavelica.jpg">
+
+<div class="card-content">
+
+<h3>Huancavelica</h3>
+
+<p>Turismo rural y paisajes andinos.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- HUANUCO -->
+
+<div class="card">
+
+<img src="img/huanuco.jpg">
+
+<div class="card-content">
+
+<h3>Huánuco</h3>
+
+<p>La Bella Durmiente y selva alta.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- ICA -->
+
+<div class="card">
+
+<img src="img/ica.jpg">
+
+<div class="card-content">
+
+<h3>Ica</h3>
+
+<p>Huacachina, Paracas y desierto.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- JUNÍN -->
+
+<div class="card">
+
+<img src="img/junin.jpg">
+
+<div class="card-content">
+
+<h3>Junín</h3>
+
+<p>Valle del Mantaro y naturaleza.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- LA LIBERTAD -->
+
+<div class="card">
+
+<img src="img/lalibertad.jpg">
+
+<div class="card-content">
+
+<h3>La Libertad</h3>
+
+<p>Chan Chan y Huanchaco.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LAMBAYEQUE -->
+
+<div class="card">
+
+<img src="img/lambayeque.jpg">
+
+<div class="card-content">
+
+<h3>Lambayeque</h3>
+
+<p>Museos, Sipán y playas del norte.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- LIMA -->
+
+<div class="card">
+
+<img src="img/lima.jpg">
+
+<div class="card-content">
+
+<h3>Lima</h3>
+
+<p>Centro histórico, Miraflores y gastronomía.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- LORETO -->
+
+<div class="card">
+
+<img src="img/loreto.jpg">
+
+<div class="card-content">
+
+<h3>Loreto</h3>
+
+<p>Iquitos y la Amazonía peruana.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- MADRE DE DIOS -->
+
+<div class="card">
+
+<img src="img/madrededios.jpg">
+
+<div class="card-content">
+
+<h3>Madre de Dios</h3>
+
+<p>Selva, Tambopata y biodiversidad.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- MOQUEGUA -->
+
+<div class="card">
+
+<img src="img/moquegua.jpg">
+
+<div class="card-content">
+
+<h3>Moquegua</h3>
+
+<p>Viñedos y tranquilidad sureña.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- PASCO -->
+
+<div class="card">
+
+<img src="img/pasco.jpg">
+
+<div class="card-content">
+
+<h3>Pasco</h3>
+
+<p>Oxapampa y paisajes andinos.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- PIURA -->
+
+<div class="card">
+
+<img src="img/piura.jpg">
+
+<div class="card-content">
+
+<h3>Piura</h3>
+
+<p>Playas, Máncora y clima cálido.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- PUNO -->
+
+<div class="card">
+
+<img src="img/puno.jpg">
+
+<div class="card-content">
+
+<h3>Puno</h3>
+
+<p>Lago Titicaca y cultura andina.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- SAN MARTÍN -->
+
+<div class="card">
+
+<img src="img/sanmartin.jpg">
+
+<div class="card-content">
+
+<h3>San Martín</h3>
+
+<p>Tarapoto y cataratas naturales.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- TACNA -->
+
+<div class="card">
+
+<img src="img/tacna.jpg">
+
+<div class="card-content">
+
+<h3>Tacna</h3>
+
+<p>Historia y frontera sur del Perú.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- TUMBES -->
+
+<div class="card">
+
+<img src="img/tumbes.jpg">
+
+<div class="card-content">
+
+<h3>Tumbes</h3>
+
+<p>Playas tropicales y manglares.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+<!-- UCAYALI -->
+
+<div class="card">
+
+<img src="img/ucayali.jpg">
+
+<div class="card-content">
+
+<h3>Ucayali</h3>
+
+<p>Selva amazónica y ríos extensos.</p>
+
+<button>Ver más</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CARRUSEL
+========================= -->
+
+<section class="carousel">
+
+<h2>Destinos Destacados</h2>
+
+<div class="carousel-container">
+
+<div class="slide active">
+
+<img src="img/machu.jpg">
+
+<h3>Machu Picchu</h3>
+
+</div>
+
+<div class="slide">
+
+<img src="img/colca.jpg">
+
+<h3>Cañón del Colca</h3>
+
+</div>
+
+<div class="slide">
+
+<img src="img/paracas.jpg">
+
+<h3>Paracas</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+SERVICIOS
+========================= -->
+
+<section class="services">
+
+<h2>Servicios</h2>
+
+<div class="services-grid">
+
+<div class="service">
+
+<i class="fa-solid fa-bus"></i>
+
+<h3>Transporte</h3>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-hotel"></i>
+
+<h3>Hoteles</h3>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-map"></i>
+
+<h3>Guías turísticos</h3>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3>Entradas</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ESTADÍSTICAS
+========================= -->
+
+<section class="stats">
+
+<h2>Experiencia Kawsay Tours</h2>
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<h3 class="counter" data-target="15000">0</h3>
+
+<p>Clientes felices</p>
+
+</div>
+
+<div class="stat">
+
+<h3 class="counter" data-target="24">0</h3>
+
+<p>Departamentos del Perú</p>
+
+</div>
+
+<div class="stat">
+
+<h3 class="counter" data-target="500">0</h3>
+
+<p>Tours realizados</p>
+
+</div>
+
+<div class="stat">
+
+<h3 class="counter" data-target="98">0</h3>
+
+<p>% Satisfacción</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+PROMOCIONES
+========================= -->
+
+<section class="promotions">
+
+<h2>Promociones Especiales</h2>
+
+<div class="promo-grid">
+
+<div class="promo">
+
+<img src="img/cusco.jpg">
+
+<h3>Paquete Cusco</h3>
+
+<p>4 días / 3 noches</p>
+
+<span>S/ 899</span>
+
+<button>Reservar</button>
+
+</div>
+
+<div class="promo">
+
+<img src="img/ica.jpg">
+
+<h3>Ica + Paracas</h3>
+
+<p>3 días / 2 noches</p>
+
+<span>S/ 599</span>
+
+<button>Reservar</button>
+
+</div>
+
+<div class="promo">
+
+<img src="img/arequipa.jpg">
+
+<h3>Arequipa Mágica</h3>
+
+<p>5 días / 4 noches</p>
+
+<span>S/ 990</span>
+
+<button>Reservar</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+TESTIMONIOS
+========================= -->
+
+<section class="testimonials">
+
+<h2>Lo que dicen nuestros viajeros</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<img src="img/user1.jpg">
+
+<h3>María López</h3>
+
+<p>★★★★★</p>
+
+<p>Excelente servicio, muy recomendado para viajar a Cusco.</p>
+
+</div>
+
+<div class="testimonial">
+
+<img src="img/user2.jpg">
+
+<h3>Juan Pérez</h3>
+
+<p>★★★★★</p>
+
+<p>Todo muy organizado, una experiencia inolvidable.</p>
+
+</div>
+
+<div class="testimonial">
+
+<img src="img/user3.jpg">
+
+<h3>Carla Rojas</h3>
+
+<p>★★★★★</p>
+
+<p>Los mejores precios y atención personalizada.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CONTACTO
+========================= -->
+
+<section class="contact" id="contacto">
+
+<h2>Reserva tu viaje</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre completo" required>
+
+<input type="text" placeholder="DNI" required>
+
+<input type="tel" placeholder="Teléfono" required>
+
+<input type="email" placeholder="Correo electrónico" required>
+
+<select>
+
+<option>Selecciona un destino</option>
+
+<option>Cusco</option>
+
+<option>Arequipa</option>
+
+<option>Ica</option>
+
+<option>Puno</option>
+
+<option>Piura</option>
+
+</select>
+
+<input type="number" placeholder="Número de personas">
+
+<input type="date">
+
+<textarea placeholder="Comentarios"></textarea>
+
+<button type="submit">Enviar Reserva</button>
+
+</form>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+
+<h2>Kawsay Tours</h2>
+
+<p>
+
+Descubre el Perú con los mejores paquetes turísticos,
+
+seguridad y precios accesibles.
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contacto</h3>
+
+<p>📞 946 046 780</p>
+
+<p>📧 kawsaytours@gmail.com</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Redes Sociales</h3>
+
+<p>Facebook</p>
+
+<p>Instagram</p>
+
+<p>TikTok</p>
+
+<p>WhatsApp</p>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+<p>© 2026 Kawsay Tours - Todos los derechos reservados</p>
+
+</div>
+
+</footer>
+
+<!-- =========================
+WHATSAPP FLOTANTE
+========================= -->
+
+<a href="https://wa.me/51946046780"
+class="whatsapp"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- =========================
+BOTÓN VOLVER ARRIBA
+========================= -->
+
+<button id="scrollTop">
+
+⬆
+
+</button>
+
+<!-- =========================
+MODAL INFO
+========================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Información del destino</h2>
+
+<p>
+
+Aquí podrás ver información detallada del destino seleccionado,
+
+incluyendo tours, precios y recomendaciones.
+
+</p>
+
+</div>
+
+</div>
