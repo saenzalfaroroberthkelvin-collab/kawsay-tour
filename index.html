@@ -1364,3 +1364,77 @@ incluyendo tours, precios y recomendaciones.
 </div>
 
 </div>
+
+<!-- =========================
+SCRIPTS
+========================= -->
+
+<script>
+
+// =========================
+// BOTÓN SCROLL ARRIBA
+// =========================
+
+let scrollBtn = document.getElementById("scrollTop");
+
+window.onscroll = function () {
+
+if (document.documentElement.scrollTop > 200) {
+
+scrollBtn.style.display = "block";
+
+} else {
+
+scrollBtn.style.display = "none";
+
+}
+
+};
+
+scrollBtn.onclick = function () {
+
+window.scrollTo({ top: 0, behavior: "smooth" });
+
+};
+
+// =========================
+// CONTADORES ANIMADOS
+// =========================
+
+let counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+let updateCount = () => {
+
+let target = +counter.getAttribute("data-target");
+
+let count = +counter.innerText;
+
+let speed = 50;
+
+let increment = target / speed;
+
+if (count < target) {
+
+counter.innerText = Math.ceil(count + increment);
+
+setTimeout(updateCount, 40);
+
+} else {
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCount();
+
+});
+
+</script>
+
+</body>
+
+</html>
