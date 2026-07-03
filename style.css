@@ -11,7 +11,9 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0d0d0d;
+background:
+linear-gradient(rgba(13,13,13,0.92), rgba(13,13,13,0.92)),
+url("img/fondo.jpg") center/cover fixed no-repeat;
 color:white;
 overflow-x:hidden;
 }
@@ -168,7 +170,7 @@ BUSCADOR
 
 .search-section{
 text-align:center;
-background:#111;
+background:rgba(17,17,17,0.55);
 }
 
 .search-section input{
@@ -195,7 +197,7 @@ DESTINOS (CARDS)
 ========================= */
 
 .destinos{
-background:#0d0d0d;
+background:rgba(13,13,13,0.55);
 }
 
 .cards{
@@ -258,7 +260,7 @@ NOSOTROS
 ========================= */
 
 .nosotros{
-background:#111;
+background:rgba(17,17,17,0.55);
 }
 
 .nosotros-grid{
@@ -283,7 +285,7 @@ SERVICIOS
 ========================= */
 
 .services{
-background:#0d0d0d;
+background:rgba(13,13,13,0.55);
 }
 
 .services-grid{
@@ -320,7 +322,7 @@ CARRUSEL
 ========================= */
 
 .carousel{
-background:#111;
+background:rgba(17,17,17,0.55);
 text-align:center;
 }
 
@@ -361,7 +363,7 @@ ESTADÍSTICAS
 ========================= */
 
 .stats{
-background:#0d0d0d;
+background:rgba(13,13,13,0.55);
 text-align:center;
 }
 
@@ -392,7 +394,7 @@ PROMOCIONES
 ========================= */
 
 .promotions{
-background:#111;
+background:rgba(17,17,17,0.55);
 }
 
 .promo-grid{
@@ -446,7 +448,7 @@ TESTIMONIOS
 ========================= */
 
 .testimonials{
-background:#0d0d0d;
+background:rgba(13,13,13,0.55);
 text-align:center;
 }
 
@@ -483,7 +485,7 @@ FORMULARIO
 ========================= */
 
 .contact{
-background:#111;
+background:rgba(17,17,17,0.55);
 text-align:center;
 }
 
